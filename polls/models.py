@@ -11,7 +11,7 @@ class User(AbstractUser):
     username = models.CharField(max_length=254, verbose_name='Логин', unique=True, blank=False)
     email = models.CharField(max_length=254, verbose_name='Почта', unique=True, blank=False)
     password = models.CharField(max_length=254, verbose_name='Пароль', blank=False)
-    avatar = models.ImageField(upload_to='static', verbose_name='Аватар', blank=False)
+    avatar = models.ImageField(upload_to='polls/user', verbose_name='Аватарка', blank=False)
 
     USERNAME_FIELD = 'username'
 
@@ -22,7 +22,13 @@ class User(AbstractUser):
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+    short_description = models.CharField(max_length=400, null=True)
+    description = models.CharField(max_length=3000, null=True)
+    image = models.ImageField(upload_to='media/questions', blank=True)
+    votes = models.IntegerField(default=0, blank=True)
+    voted_by = models.ManyToManyField(User, related_name='voted_by', blank=True)
 
+    @property
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
@@ -34,6 +40,10 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
+
+    def get_percent(self):
+        percents = round(self.votes * 100 / self.question.votes)
+        return percents
 
     def __str__(self):
         return self.choice_text
