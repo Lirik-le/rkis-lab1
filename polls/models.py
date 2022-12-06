@@ -28,7 +28,6 @@ class Question(models.Model):
     votes = models.IntegerField(default=0, blank=True)
     voted_by = models.ManyToManyField(User, related_name='voted_by', blank=True)
 
-    @property
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 

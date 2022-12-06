@@ -1,6 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden, Http404
 
 from .forms import RegisterForm, UpdateForm
 from .models import Question, Choice, User
@@ -30,6 +30,14 @@ class UpdateUser(LoginRequiredMixin, generic.UpdateView):
     form_class = UpdateForm
     success_url = reverse_lazy('polls:index')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        other_user = User.objects.get(pk=self.kwargs['pk'])
+        if self.request.user.pk != other_user.pk:
+            raise Http404
+
+        return context
+
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
@@ -42,6 +50,14 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        quest = Question.objects.get(pk=self.kwargs['pk'])
+        if not quest.was_published_recently() and not self.request.user.is_superuser:
+            raise Http404
+
+        return context
 
 
 class ResultsView(generic.DetailView):
@@ -56,13 +72,13 @@ def vote(request, question_id):
     except (KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
             'question': question,
-            'error_message': 'вы не сделали выбор'
+            'error_message': 'Вы не сделали выбор'
         })
     else:
         if Question.objects.filter(id=question_id, voted_by=request.user):
             return render(request, 'polls/detail.html', {
                 'question': question,
-                'error_message': 'вы уже приняли участие в голосовании'
+                'error_message': 'Вы уже приняли участие в голосовании'
             })
         else:
             question.voted_by.add(request.user)

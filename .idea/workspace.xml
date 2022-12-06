@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db04aa4a-7f51-4e12-8876-23c88743e887" name="Changes" comment="start">
+    <list default="true" id="3fdbd3fa-573d-4cff-9052-ae8758561594" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/templates/polls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls/templates/polls/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/templates/polls/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls/templates/polls/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polls/templates/polls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls/templates/polls/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/templates/polls/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls/templates/polls/results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,49 +15,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2INyoLhpsiVti98hyh6s2ZvPvEd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2IWI2koUHeJxUPrGax8QUV9dp4L" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Кирилл/Учёба/РКИС/mysite"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Кирилл\Учёба\РКИС\mysite\polls\templates" />
-      <recent name="D:\Кирилл\Учёба\РКИС\mysite\polls\templates\polls\registration" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="db04aa4a-7f51-4e12-8876-23c88743e887" name="Changes" comment="start" />
-      <created>1670036510667</created>
+      <changelist id="3fdbd3fa-573d-4cff-9052-ae8758561594" name="Changes" comment="" />
+      <created>1670290707317</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670036510667</updated>
+      <updated>1670290707317</updated>
     </task>
     <servers />
   </component>
